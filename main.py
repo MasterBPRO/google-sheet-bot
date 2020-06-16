@@ -85,7 +85,7 @@ async def getAge(message):
     try:
         data[message.chat.id]['name'] = message.text  # Занесения имени в словарь
 
-        await message.answer(text=src.getAge,
+        await message.answer(text=src.getAge.format(name=message.text),
                              reply_markup=None,
                              parse_mode='html')
 
